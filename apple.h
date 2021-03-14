@@ -3,10 +3,8 @@
 #endif
 
 #include <vector>
+#include "raylib.h"
 
-class Shape {};
+using std::vector;
 
-class Body
-{
-    
-};
+
