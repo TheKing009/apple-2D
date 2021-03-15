@@ -1,4 +1,4 @@
-#include "includes/vector2.h"
+#include "../includes/vector2.h"
 
 using apple2D::Vector2;
 
@@ -45,13 +45,13 @@ void Vector2::Normalize()
     //*this = *this / magnitude;
 }
 
-Vector2 Vector2::operator-()
+void Vector2::operator-()
 {
     this->x = -this->x;
     this->y = -this->y;
 }
 
-Vector2 Vector2::operator+(const Vector2 &vec)
+Vector2 Vector2::operator+(const Vector2& vec)
 {
     return Vector2(this->x + vec.x, this->y + vec.y);
 }

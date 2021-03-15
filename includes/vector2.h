@@ -1,8 +1,9 @@
 #ifndef VECTOR2_H
 #define VECTOR2_H
-#endif
 
 #include <math.h>
+
+using std::sqrt;
 
 namespace apple2D
 {
@@ -23,10 +24,10 @@ namespace apple2D
 
             inline void Normalize();
             
-            inline Vector2 operator + (const Vector2 &vec);
-            inline Vector2 operator - (const Vector2 &vec);
-            inline Vector2 operator / (const double &scalar);
-            inline Vector2 operator * (const double &scalar);
+            inline Vector2 operator+(const Vector2& vec);
+            inline Vector2 operator-(const Vector2 &vec);
+            inline Vector2 operator/(const double &scalar);
+            inline Vector2 operator*(const double &scalar);
 
             inline bool operator==(const Vector2 &vec);
 
@@ -36,8 +37,10 @@ namespace apple2D
             inline void operator-=(const Vector2 &vec);
             inline void operator*=(const double &scalar);
             inline void operator/=(const double &scalar);
-            inline Vector2 operator - ();
+            inline void operator-();
 
             inline static double Dot(const Vector2 &v1, const Vector2 &v2);
     }; 
 }
+
+#endif
