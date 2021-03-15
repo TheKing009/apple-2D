@@ -2,6 +2,8 @@
 #define VECTOR2_H
 #endif
 
+#include <math.h>
+
 namespace apple2D
 {
 
@@ -16,21 +18,26 @@ namespace apple2D
             Vector2(double, double);
             Vector2(int, int);
 
-            double Length();
-            double Length_sqr();
+            inline double Length();
+            inline double Length_sqr();
 
-            void Normalize();
+            inline void Normalize();
             
-            Vector2 operator + (const Vector2 &vec);
-            Vector2 operator - (const Vector2 &vec);
-            Vector2 operator / (const double &scalar);
-            Vector2 operator * (const double &scalar);
+            inline Vector2 operator + (const Vector2 &vec);
+            inline Vector2 operator - (const Vector2 &vec);
+            inline Vector2 operator / (const double &scalar);
+            inline Vector2 operator * (const double &scalar);
 
-            Vector2 operator==(const Vector2 &vec);
-            Vector2 operator=(const Vector2 &vec);
+            inline bool operator==(const Vector2 &vec);
 
-            Vector2 operator - ();
-    };
+            inline void operator=(const Vector2 &vec);
+
+            inline void operator+=(const Vector2 &vec);
+            inline void operator-=(const Vector2 &vec);
+            inline void operator*=(const double &scalar);
+            inline void operator/=(const double &scalar);
+            inline Vector2 operator - ();
+    }; 
 
     double Dot(const Vector2 &v1, const Vector2 &v2);
 }

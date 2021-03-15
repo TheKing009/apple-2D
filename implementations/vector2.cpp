@@ -29,7 +29,7 @@ Vector2::Vector2(int x, int y)
 
 double Vector2::Length()
 {
-
+    return sqrt(this->Length_sqr());
 }
 
 double Vector2::Length_sqr()
@@ -46,6 +46,63 @@ void Vector2::Normalize()
     //*this = *this / magnitude;
 }
 
+Vector2 Vector2::operator-()
+{
+    this->x = -this->x;
+    this->y = -this->y;
+}
+
+Vector2 Vector2::operator+(const Vector2 &vec)
+{
+    return Vector2(this->x + vec.x, this->y + vec.y);
+}
+
+Vector2 Vector2::operator-(const Vector2 &vec)
+{
+    return Vector2(this->x - vec.x, this->y - vec.y);
+}
+
+Vector2 Vector2::operator*(const double &scalar)
+{
+    return Vector2(this->x * scalar, this->y * scalar);
+}
+
+Vector2 Vector2::operator/(const double &scalar)
+{
+    return Vector2(this->x / scalar, this->y / scalar);
+}
+
+bool Vector2::operator==(const Vector2 &vec)
+{
+    if (vec.x == this->x && vec.y == this->y)
+        return true;
+
+    return false;
+}
+
+void Vector2::operator+=(const Vector2 &vec)
+{
+    this->x += vec.x;
+    this->y += vec.y; 
+}
+
+void Vector2::operator-=(const Vector2 &vec)
+{
+    this->x -= vec.x;
+    this->y -= vec.y;
+}
+
+void Vector2::operator*=(const double &scalar)
+{
+    this->x *= scalar;
+    this->y *= scalar;
+}
+
+void Vector2::operator/=(const double &scalar)
+{
+    this->x / scalar;
+    this->y / scalar;
+}
 
 /* Optimisation notes:
 1. store magnitude
