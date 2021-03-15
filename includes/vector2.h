@@ -37,7 +37,7 @@ namespace apple2D
             inline void operator*=(const double &scalar);
             inline void operator/=(const double &scalar);
             inline Vector2 operator - ();
-    }; 
 
-    double Dot(const Vector2 &v1, const Vector2 &v2);
+            inline static double Dot(const Vector2 &v1, const Vector2 &v2);
+    }; 
 }

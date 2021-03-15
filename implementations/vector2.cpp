@@ -1,6 +1,5 @@
 #include "includes/vector2.h"
 
-using apple2D::Dot;
 using apple2D::Vector2;
 
 Vector2::Vector2()
@@ -102,6 +101,11 @@ void Vector2::operator/=(const double &scalar)
 {
     this->x / scalar;
     this->y / scalar;
+}
+
+double Vector2::Dot(const Vector2 &v1, const Vector2 &v2)
+{
+    return v1.x * v2.x + v2.y * v1.y;
 }
 
 /* Optimisation notes:
