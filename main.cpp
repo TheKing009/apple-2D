@@ -12,7 +12,7 @@ int main (void)
     vec1.x = 10.0;
     vec1.y = 2.32;
 
-    -vec1;
+    vec1 = -vec1;
     Vector2 vec2 (2.0, 4.0);
 
     Vector2 vec3 = vec1 + vec2;

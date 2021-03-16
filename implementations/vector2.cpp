@@ -41,14 +41,11 @@ void Vector2::Normalize()
     double magnitude = this->Length();
     this->x = this->x / magnitude; 
     this->y = this->y / magnitude;
-
-    //*this = *this / magnitude;
 }
 
-void Vector2::operator-()
+Vector2 Vector2::operator-()
 {
-    this->x = -this->x;
-    this->y = -this->y;
+    return Vector2(-this->x, -this->y);
 }
 
 Vector2 Vector2::operator+(const Vector2& vec)
@@ -77,6 +74,12 @@ bool Vector2::operator==(const Vector2 &vec)
         return true;
 
     return false;
+}
+
+void Vector2::operator=(const Vector2 &vec)
+{
+    this->x = vec.x;
+    this->y = vec.y;
 }
 
 void Vector2::operator+=(const Vector2 &vec)

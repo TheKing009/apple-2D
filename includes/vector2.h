@@ -19,27 +19,28 @@ namespace apple2D
             Vector2(double, double);
             Vector2(int, int);
 
-            inline double Length();
-            inline double Length_sqr();
+            double Length();
+            double Length_sqr();
 
-            inline void Normalize();
+            void Normalize();
             
-            inline Vector2 operator+(const Vector2& vec);
-            inline Vector2 operator-(const Vector2 &vec);
-            inline Vector2 operator/(const double &scalar);
-            inline Vector2 operator*(const double &scalar);
+            Vector2 operator+(const Vector2& vec);
+            Vector2 operator-(const Vector2 &vec);
+            Vector2 operator/(const double &scalar);
+            Vector2 operator*(const double &scalar);
 
-            inline bool operator==(const Vector2 &vec);
+            bool operator==(const Vector2 &vec);
 
-            inline void operator=(const Vector2 &vec);
+            void operator=(const Vector2 &vec);
 
-            inline void operator+=(const Vector2 &vec);
-            inline void operator-=(const Vector2 &vec);
-            inline void operator*=(const double &scalar);
-            inline void operator/=(const double &scalar);
-            inline void operator-();
+            void operator+=(const Vector2 &vec);
+            void operator-=(const Vector2 &vec);
+            void operator*=(const double &scalar);
+            void operator/=(const double &scalar);
 
-            inline static double Dot(const Vector2 &v1, const Vector2 &v2);
+            Vector2 operator-();
+
+            static double Dot(const Vector2 &v1, const Vector2 &v2);
     }; 
 }
 
