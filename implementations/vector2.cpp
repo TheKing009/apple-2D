@@ -111,6 +111,11 @@ double Vector2::Dot(const Vector2 &v1, const Vector2 &v2)
     return v1.x * v2.x + v2.y * v1.y;
 }
 
+double Vector2::Cross(const Vector2 &v1, const Vector2 &v2)
+{
+    return (v1.x * v2.y - v1.y * v2.x);
+}
+
 /* Optimisation notes:
 1. store magnitude
 2. store 1 / magnitude

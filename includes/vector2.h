@@ -7,7 +7,6 @@ using std::sqrt;
 
 namespace apple2D
 {
-
     class Vector2
     {
         public:
@@ -41,6 +40,7 @@ namespace apple2D
             Vector2 operator-();
 
             static double Dot(const Vector2 &v1, const Vector2 &v2);
+            static double Cross (const Vector2 &v1, const Vector2 &v2);
     }; 
 }
 

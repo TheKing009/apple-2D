@@ -25,7 +25,15 @@ int main (void)
 
     float dot = Vector2::Dot(vec3, vec1);
 
-    cout << dot;
+    cout << dot << endl;
+
+    vec1 = Vector2(1.0, 0.0);
+    vec2 = Vector2(0.0, 1.0);
+
+    dot = Vector2::Dot(vec1, vec2);
+
+    cout << dot << endl;
+    cout << Vector2::Cross(vec1, vec1) << endl;
 
     return 0;
 }
