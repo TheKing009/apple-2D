@@ -6,8 +6,6 @@
 #define DEG2RAD M_PI/180.0
 #define RAD2DEG M_PI/180.0
 
-using std::sqrt;
-
 namespace apple2D
 {
     class Vector2

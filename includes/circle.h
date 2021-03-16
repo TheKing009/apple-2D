@@ -1,5 +1,5 @@
 #ifndef CIRCLE_H
-#define CIRCE_H
+#define CIRCLE_H
 
 #include "vector2.h"
 

@@ -115,8 +115,8 @@ void Vector2::operator*=(const double &scalar)
 
 void Vector2::operator/=(const double &scalar)
 {
-    this->x / scalar;
-    this->y / scalar;
+    this->x /= scalar;
+    this->y /= scalar;
 }
 
 double Vector2::Dot(const Vector2 &v1, const Vector2 &v2)
