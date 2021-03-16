@@ -47,8 +47,8 @@ Vector2 Vector2::Rotate(const float& degrees)
 {
     float rad = degrees * DEG2RAD;
 
-    double c = cos(M_PI/2.00);
-    double s = sin(rad);
+    double c = cos((double)rad);
+    double s = sin((double)rad);
 
     double vx = this->x;
     double vy = this->y;
