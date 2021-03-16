@@ -14,6 +14,9 @@ namespace apple2D
             Circle();
             Circle (const Vector2&, const double&);
             Circle (const Vector2&, const int&);
+
+            Vector2 GetCenter() const { return center; }
+            double GetRadius() const { return radius; }
     };    
 }
 

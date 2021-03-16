@@ -19,7 +19,8 @@ namespace apple2D
             Line (const double&, const double&);
             Line (const Vector2&, const Vector2&);
 
-            bool PointOnLine(const Vector2&);
+            double GetSlope() const { return m; }
+            double GetIntercept() const { return c; }
     };
 }
 

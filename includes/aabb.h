@@ -14,7 +14,8 @@ namespace apple2D
             AABB();
             AABB(const Vector2&, const Vector2&);
 
-            
+            Vector2 GetMin() const { return min; }
+            Vector2 GetMax() const { return max; }
     };
 }
 
