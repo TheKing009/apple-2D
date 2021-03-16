@@ -28,7 +28,9 @@ int main (void)
     cout << dot << endl;
 
     vec1 = Vector2(1.0, 0.0);
-    vec2 = Vector2(0.0, 1.0);
+    vec2 = vec1.Rotate(90.0);
+
+    cout << vec2.x << "\t" << vec2.y << endl;
 
     dot = Vector2::Dot(vec1, vec2);
 
