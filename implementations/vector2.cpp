@@ -43,6 +43,19 @@ void Vector2::Normalize()
     this->y = this->y / magnitude;
 }
 
+Vector2 Vector2::Rotate(const float& degrees)
+{
+    float rad = degrees * DEG2RAD;
+
+    double c = cos(M_PI/2.00);
+    double s = sin(rad);
+
+    double vx = this->x;
+    double vy = this->y;
+
+    return Vector2(c * vx - s * vy, c * vy + s * vx);
+}
+
 Vector2 Vector2::operator-()
 {
     return Vector2(-this->x, -this->y);

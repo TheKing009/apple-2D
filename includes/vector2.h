@@ -3,6 +3,9 @@
 
 #include <math.h>
 
+#define DEG2RAD M_PI/180.0
+#define RAD2DEG M_PI/180.0
+
 using std::sqrt;
 
 namespace apple2D
@@ -22,6 +25,7 @@ namespace apple2D
             double Length_sqr();
 
             void Normalize();
+            Vector2 Rotate(const float&);
             
             Vector2 operator+(const Vector2& vec);
             Vector2 operator-(const Vector2 &vec);
