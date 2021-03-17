@@ -3,8 +3,14 @@
 
 #include <math.h>
 
-#define DEG2RAD M_PI/180.0
-#define RAD2DEG M_PI/180.0
+#ifndef PI
+#define PI 3.14159265358979323846
+#endif
+
+#define DEG2RAD PI/180.0
+#define RAD2DEG PI/180.0
+
+#define ZERO_VECTOR Vector2(0.0, 0.0);
 
 namespace apple2D
 {
@@ -43,6 +49,8 @@ namespace apple2D
 
             static double Dot(const Vector2 &v1, const Vector2 &v2);
             static double Cross (const Vector2 &v1, const Vector2 &v2);
+            static Vector2 Perpendicular(const Vector2 &vec);
+            static Vector2 Lerp (Vector2 &start, Vector2 &end, double &amount);
     }; 
 }
 

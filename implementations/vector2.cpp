@@ -129,6 +129,16 @@ double Vector2::Cross(const Vector2 &v1, const Vector2 &v2)
     return (v1.x * v2.y - v1.y * v2.x);
 }
 
+Vector2 Vector2::Perpendicular(const Vector2 &vec)
+{
+    return Vector2 (-vec.y, vec.x);
+}
+
+Vector2 Vector2::Lerp(Vector2& start, Vector2&end, double& amount)
+{
+    return start + (start - end) * amount;
+}
+
 /* Optimisation notes:
 1. store magnitude
 2. store 1 / magnitude
