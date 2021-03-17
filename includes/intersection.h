@@ -11,9 +11,9 @@ namespace apple2D
         private:
             Intersection(); // No instancing allowed
         public:
-            static bool LineVsPoint (const Line&, const Vector2&);
-            static bool CircleVsPoint (const Circle&, const Vector2&);
-            static bool AABBvsPoint (const AABB&, const Vector2&);
+            static bool LineVsPoint ( Line&,  Vector2&);
+            static bool CircleVsPoint ( Circle&,  Vector2&);
+            static bool AABBvsPoint ( AABB&,  Vector2&);
     };
 }
 

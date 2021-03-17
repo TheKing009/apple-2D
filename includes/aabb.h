@@ -12,10 +12,10 @@ namespace apple2D
             Vector2 max;
         public:
             AABB();
-            AABB(const Vector2&, const Vector2&);
+            AABB( Vector2&,  Vector2&);
 
-            Vector2 GetMin() const { return min; }
-            Vector2 GetMax() const { return max; }
+            Vector2 GetMin()  { return min; }
+            Vector2 GetMax()  { return max; }
     };
 }
 

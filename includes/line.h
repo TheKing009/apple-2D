@@ -12,15 +12,15 @@ namespace apple2D
     class Line
     {
         private:
-            double m;
-            double c;
+            float m;
+            float c;
         public:
             Line ();
-            Line (const double&, const double&);
-            Line (const Vector2&, const Vector2&);
+            Line ( float&,  float&);
+            Line ( Vector2&,  Vector2&);
 
-            double GetSlope() const { return m; }
-            double GetIntercept() const { return c; }
+            float GetSlope()  { return m; }
+            float GetIntercept()  { return c; }
     };
 }
 

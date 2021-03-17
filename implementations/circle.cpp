@@ -8,14 +8,14 @@ Circle::Circle()
     this->center = ZERO_VECTOR;
 }
 
-Circle::Circle(const Vector2& center, const double& radius)
+Circle::Circle( Vector2& center,  float& radius)
 {
     this->radius = radius;
     this->center = center;
 }
 
-Circle::Circle(const Vector2& center, const int& radius)
+Circle::Circle( Vector2& center,  int& radius)
 {
-    this->radius = (double)radius;
+    this->radius = (float)radius;
     this->center = center;
 }

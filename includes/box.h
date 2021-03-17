@@ -12,7 +12,7 @@ namespace apple2D
             Vector2 size;
         public:
             Box();
-            Box(const Vector2&, const Vector2&);
+            Box( Vector2&,  Vector2&);
 
             Vector2* GetVertices();
     };

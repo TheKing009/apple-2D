@@ -2,7 +2,7 @@
 
 using namespace apple2D;
 
-inline double Clamp(const double &value, const double &min, const double &max)
+inline float Clamp( float &value,  float &min,  float &max)
 {
     if (value < min)
         return min;
@@ -12,12 +12,12 @@ inline double Clamp(const double &value, const double &min, const double &max)
     return value;
 }
 
-inline double Lerp(const double &start, const double &end, const double &amount)
+inline float Lerp( float &start,  float &end,  float &amount)
 {
     return start + amount * (start - end);
 }
 
-inline double Normalize(const double &value, const double &start, const double &end)
+inline float Normalize( float &value,  float &start,  float &end)
 {
-    return (value - start) / (end - start)
+    return (value - start) / (end - start);
 }

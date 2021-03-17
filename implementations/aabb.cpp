@@ -4,11 +4,11 @@ using namespace apple2D;
 
 AABB::AABB()
 {
-    this->min = Vector2(0.0, 0.0);
-    this->max = Vector2(0.0, 0.0);
+    this->min = Vector2(0.0f, 0.0f);
+    this->max = Vector2(0.0f, 0.0f);
 }
 
-AABB::AABB(const Vector2& min, const Vector2& max)
+AABB::AABB( Vector2& min,  Vector2& max)
 {
     this->min = min;
     this->max = max;

@@ -9,14 +9,14 @@ namespace apple2D
     {
         private:
            Vector2 center;
-           double radius; 
+           float radius; 
         public:
             Circle();
-            Circle (const Vector2&, const double&);
-            Circle (const Vector2&, const int&);
+            Circle ( Vector2&,  float&);
+            Circle ( Vector2&,  int&);
 
-            Vector2 GetCenter() const { return center; }
-            double GetRadius() const { return radius; }
+            Vector2 GetCenter()  { return center; }
+            float GetRadius()  { return radius; }
     };    
 }
 
