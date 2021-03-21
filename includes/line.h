@@ -16,11 +16,14 @@ namespace apple2D
             float c;
         public:
             Line ();
-            Line ( float&,  float&);
-            Line ( Vector2&,  Vector2&);
+            Line ( float,  float);
+            Line ( Vector2,  Vector2);
 
             float GetSlope()  { return m; }
             float GetIntercept()  { return c; }
+
+
+            static Vector2 IntersectionPoint (Line ll1, Line l2);
     };
 }
 
