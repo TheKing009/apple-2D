@@ -5,5 +5,6 @@
 #include "aabb.h"
 #include "line.h"
 #include "circle.h"
+#include "segment.h"
 
 #endif

@@ -4,13 +4,15 @@
 #include <math.h>
 
 #ifndef PI
-#define PI 3.14159265358979323846f
+    #define PI 3.14159265358979323846f
 #endif
 
-#define DEG2RAD PI/180.0
-#define RAD2DEG PI/180.0
+#ifdef PI
+    #define DEG2RAD PI/180.0f
+    #define RAD2DEG PI/180.0f
+#endif
 
-#define ZERO_VECTOR Vector2(0.0f, 0.0f);
+#define ZERO_VECTOR Vector2(0.0f, 0.0f)
 
 namespace apple2D
 {
@@ -25,31 +27,32 @@ namespace apple2D
             Vector2(int, int);
 
             float Length();
-            float Length_sqr();
+            float LengthSqr();
 
-            void Normalize();
-            Vector2 Rotate( float&);
+	        void Normalize();
+            Vector2 Normalized();
+            Vector2 Rotate( float);
             
-            Vector2 operator+( Vector2& vec);
-            Vector2 operator-( Vector2 &vec);
-            Vector2 operator/( float &scalar);
-            Vector2 operator*( float &scalar);
+            Vector2 operator+( Vector2 vec);
+            Vector2 operator-( Vector2 vec);
+            Vector2 operator/( float scalar);
+            Vector2 operator*( float scalar);
 
-            bool operator==( Vector2 &vec);
+            bool operator==( Vector2 vec);
  
-            void operator=( Vector2 &vec);
+            void operator=( Vector2 vec);
 
-            void operator+=( Vector2 &vec);
-            void operator-=( Vector2 &vec);
-            void operator*=( float &scalar);
-            void operator/=( float &scalar);
+            void operator+=( Vector2 vec);
+            void operator-=( Vector2 vec);
+            void operator*=( float scalar);
+            void operator/=( float scalar);
 
             Vector2 operator-();
 
-            static float Dot( Vector2 &v1,  Vector2 &v2);
-            static float Cross ( Vector2 &v1,  Vector2 &v2);
-            static Vector2 Perpendicular( Vector2 &vec);
-            static Vector2 Lerp (Vector2 &start, Vector2 &end, float &amount);
+            static float Dot( Vector2 v1,  Vector2 v2);
+            static float Cross ( Vector2 v1,  Vector2 v2);
+            static Vector2 Perpendicular( Vector2 vec);
+            static Vector2 Lerp (Vector2 start, Vector2 end, float amount);
     }; 
 }
 

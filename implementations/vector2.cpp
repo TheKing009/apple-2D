@@ -22,10 +22,10 @@ Vector2::Vector2(int x, int y)
 
 float Vector2::Length()
 {
-    return sqrt(this->Length_sqr());
+    return sqrt(this->LengthSqr());
 }
 
-float Vector2::Length_sqr()
+float Vector2::LengthSqr()
 {
     return (this->x * this->x) + (this->y * this->y);
 }
@@ -37,12 +37,18 @@ void Vector2::Normalize()
     this->y = this->y / magnitude;
 }
 
-Vector2 Vector2::Rotate( float& degrees)
+Vector2 Vector2::Normalized()
+{
+	float magnitude = this -> Length();
+	return Vector2(this->x / magnitude, this->y/magnitude);
+}
+
+Vector2 Vector2::Rotate( float degrees)
 {
     float rad = degrees * DEG2RAD;
 
-    float c = cos((float)rad);
-    float s = sin((float)rad);
+    float c = cosf(rad);
+    float s = sinf(rad);
 
     float vx = this->x;
     float vy = this->y;
@@ -55,27 +61,27 @@ Vector2 Vector2::operator-()
     return Vector2(-this->x, -this->y);
 }
 
-Vector2 Vector2::operator+( Vector2& vec)
+Vector2 Vector2::operator+( Vector2 vec)
 {
     return Vector2(this->x + vec.x, this->y + vec.y);
 }
 
-Vector2 Vector2::operator-( Vector2 &vec)
+Vector2 Vector2::operator-( Vector2 vec)
 {
     return Vector2(this->x - vec.x, this->y - vec.y);
 }
 
-Vector2 Vector2::operator*( float &scalar)
+Vector2 Vector2::operator*( float scalar)
 {
     return Vector2(this->x * scalar, this->y * scalar);
 }
 
-Vector2 Vector2::operator/( float &scalar)
+Vector2 Vector2::operator/( float scalar)
 {
     return Vector2(this->x / scalar, this->y / scalar);
 }
 
-bool Vector2::operator==( Vector2 &vec)
+bool Vector2::operator==( Vector2 vec)
 {
     if (vec.x == this->x && vec.y == this->y)
         return true;
@@ -83,52 +89,52 @@ bool Vector2::operator==( Vector2 &vec)
     return false;
 }
 
-void Vector2::operator=( Vector2 &vec)
+void Vector2::operator=( Vector2 vec)
 {
     this->x = vec.x;
     this->y = vec.y;
 }
 
-void Vector2::operator+=( Vector2 &vec)
+void Vector2::operator+=( Vector2 vec)
 {
     this->x += vec.x;
     this->y += vec.y; 
 }
 
-void Vector2::operator-=( Vector2 &vec)
+void Vector2::operator-=( Vector2 vec)
 {
     this->x -= vec.x;
     this->y -= vec.y;
 }
 
-void Vector2::operator*=( float &scalar)
+void Vector2::operator*=( float scalar)
 {
     this->x *= scalar;
     this->y *= scalar;
 }
 
-void Vector2::operator/=( float &scalar)
+void Vector2::operator/=( float scalar)
 {
     this->x /= scalar;
     this->y /= scalar;
 }
 
-float Vector2::Dot( Vector2 &v1,  Vector2 &v2)
+float Vector2::Dot( Vector2 v1,  Vector2 v2)
 {
     return v1.x * v2.x + v2.y * v1.y;
 }
 
-float Vector2::Cross( Vector2 &v1,  Vector2 &v2)
+float Vector2::Cross( Vector2 v1,  Vector2 v2)
 {
     return (v1.x * v2.y - v1.y * v2.x);
 }
 
-Vector2 Vector2::Perpendicular( Vector2 &vec)
+Vector2 Vector2::Perpendicular( Vector2 vec)
 {
     return Vector2 (-vec.y, vec.x);
 }
 
-Vector2 Vector2::Lerp(Vector2& start, Vector2&end, float& amount)
+Vector2 Vector2::Lerp(Vector2 start, Vector2 end, float amount)
 {
     return start + (start - end) * amount;
 }
