@@ -5,9 +5,9 @@
 
 namespace apple2D
 {
-    float Clamp( float&,  float&,  float&);
-    float Lerp ( float&,  float&,  float&);
-    float Normalize ( float&,  float&,  float&);
+    float Clamp( float,  float,  float);
+    float Lerp ( float,  float,  float);
+    float Normalize ( float,  float,  float);
 }
 
 #endif
