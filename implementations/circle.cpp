@@ -8,13 +8,13 @@ Circle::Circle()
     this->center = ZERO_VECTOR;
 }
 
-Circle::Circle( Vector2& center,  float& radius)
+Circle::Circle( Vector2 center,  float radius)
 {
     this->radius = radius;
     this->center = center;
 }
 
-Circle::Circle( Vector2& center,  int& radius)
+Circle::Circle( Vector2 center,  int radius)
 {
     this->radius = (float)radius;
     this->center = center;

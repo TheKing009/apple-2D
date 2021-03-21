@@ -12,8 +12,8 @@ namespace apple2D
            float radius; 
         public:
             Circle();
-            Circle ( Vector2&,  float&);
-            Circle ( Vector2&,  int&);
+            Circle ( Vector2,  float);
+            Circle ( Vector2,  int);
 
             Vector2 GetCenter()  { return center; }
             float GetRadius()  { return radius; }
