@@ -8,7 +8,7 @@ AABB::AABB()
     this->max = Vector2(0.0f, 0.0f);
 }
 
-AABB::AABB( Vector2& min,  Vector2& max)
+AABB::AABB( Vector2 min,  Vector2 max)
 {
     this->min = min;
     this->max = max;
