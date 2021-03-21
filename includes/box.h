@@ -3,18 +3,28 @@
 
 #include "vector2.h"
 
+#ifndef VERTICES 
+#define VERTICES 4
+#endif
+
 namespace apple2D
 {
+    typedef struct {
+        Vector2 v[VERTICES]; 
+    } Vertices;
+
+
     class Box
     {
         private:
-            Vector2 center;
-            Vector2 size;
+            Vector2 max;
+            Vector2 min;
+            float rotation;
         public:
-            Box();
-            Box( Vector2&,  Vector2&);
+            Box (Vector2, Vector2, float rotation);
 
-            Vector2* GetVertices();
+            Vertices GetVertices();
+            float GetRotation() {return rotation;}
     };
 }
 
